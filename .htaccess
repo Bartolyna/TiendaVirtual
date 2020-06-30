@@ -1,6 +1,10 @@
-Options All -Indexes 
-RewriteEngine on
+<IfModule mod_rewrite.c>
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f 
-RewirteRule ^(.*)$ index.php?url=$1 [QSA, L]
+Options All -Indexes
+RewriteEngine On
+
+RewriteCond  %{REQUEST_FILENAME} !-d
+RewriteCond  %{REQUEST_FILENAME} !-f
+RewriteRule  ^(.*)$ index.php?url=$1 [QSA,L]
+
+</IfModule>

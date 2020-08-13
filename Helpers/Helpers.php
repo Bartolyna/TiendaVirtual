@@ -5,6 +5,31 @@
         return BASE_URL;
     }
 
+//Retorna la url del Assets
+    function media(){
+
+        return BASE_URL."/Assets";
+    }
+
+//Retorna la url del Views/themplate
+    function headerAdmin($data=""){
+
+        $view_header = "Views/Template/header_admin.php";
+        require_once($view_header);
+    }
+
+    function footerAdmin($data=""){
+
+        $view_footer = "Views/Template/footer_admin.php";
+        require_once($view_footer);
+    }
+
+    function navAdmin($data=""){
+
+        $view_nav = "Views/Template/nav_admin.php";
+        require_once($view_nav);
+    }
+
 //Muestra informacion formateada
     function dep($data){
 
